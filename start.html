@@ -73,7 +73,7 @@
 				<div>
 					<label for="telephone-number">Numero di telofono:
 						<strong><abbr title="richiesto">*</abbr></strong>
-						<input type="tel" id="telephone-number" name="numero-di-telefono" required>
+						<input type="tel" id="telephone-number" name="numero-di-telefono" pattern="[0-9]{10-11}" title="Utilizza solo numeri" required>
 					</label>
 				</div>
 			</section>
@@ -141,19 +141,19 @@
 
 			<br>
 
-			<fieldset required>
+			<fieldset>
 				<legend>Inserisci i dati della tua carta di credito</legend>
 
 				<br>
 
 				<label for="nunber">Numero della carta:
-					<input type="text" id="number" name="nunber-card" minlength="13" maxlength="19">
+					<input type="text" id="number" name="nunber-card" minlength="13" maxlength="19" pattern="[0-9]{13-19}" title="Utilizza solo numeri">
 				</label>
 
 				<br>
 
 				<label for="cvc">CVC:
-					<input type="text" id="cvc" name="cvc" minlength="3" maxlength="4" size="4">
+					<input type="text" id="cvc" name="cvc" minlength="3" maxlength="4" pattern="[0-9]{3-4}" title="Utilizza solo numeri" size="4">
 				</label>
 
 				<br>
@@ -168,13 +168,15 @@
 			<section>
 				<div>
 					<label for="address">Indirizzo di fatturazione:
-						<input type="text" id="address" name="invoice-address" placeholder="Indirizzo + numero civico">
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="text" id="address" name="invoice-address" placeholder="Indirizzo + numero civico" required>
 					</label>
 
 					<br>
 
 					<label for="cap">CAP:
-						<input type="text" id="cap" name="cap" minlength="5" maxlength="5" size="5">
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="text" id="cap" name="cap" minlength="5" maxlength="5" pattern="[0-9]{5}" title="Utilizza solo numeri" size="5" required>
 					</label>
 				</div>
 			</section>
