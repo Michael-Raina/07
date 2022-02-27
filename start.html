@@ -19,10 +19,151 @@
 	</head>
 
 	<body>
-		<form action="#" method="get">
+		<form action="#" method="post">
+			<h1>Scheda di registrazione</h1>	
 			<p>I campi obbligatori sono contrasegnati da <strong><abbr title="richiesto">*</abbr></strong></p>
+
 			<section>
-				
+				<div>
+					<label for="mail">E-mail:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="text" id="mail" name="usermail" placeholder="La tua miglior e-mail" required>
+					</label>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="keyword">Password:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="password" id="keyword" name="password" minlength="8" maxlength="16" required>
+					</label>
+					<span>Tra 8 - 16 caratteri. <br> Usa lettere grandi, piccole e segni speciali.</span>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="name">Nome:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="text" id="nome" name="name" required>
+					</label>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="surname">Cognome:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="text" id="surname" name="cognome" required>
+					</label>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="date-of-birth">Data di nascita:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="date" id="date-of-birth" name="data-di-nascita" max="2022-02-27" required>
+					</label>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="telephone-number">Numero di telofono:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<input type="tel" id="telephone-number" name="numero-di-telefono" required>
+					</label>
+				</div>
+			</section>
+
+			<br>
+
+			<fieldset>
+				<legend>Seleziona piano di abbonamento</legend>
+				<ul>
+					<li>
+						
+						<label for="free">
+							<input type="radio" id="free" name="fav-subscription"> 
+							Piano FREE (Gratuito)
+						</label>
+					</li>
+					<li>
+						<label for="base">
+							<input type="radio" id="base" name="fav-subscription">
+							Piani BASE 97€
+						</label>
+					</li>
+					<li>
+						<label for="standard"></label>
+							<input type="radio" id="standard" name="fav-subscription">
+							Piano STANDARD 197€
+						</label>
+					</li>
+					<li>
+						<label for="premium"></label>
+							<input type="radio" id="premium" name="fav-subscription">
+							Piano PREMIUM 397€
+						</label>
+					</li>
+				</ul>
+			</fieldset>
+			
+			<br>
+
+			<section>
+				<div>
+				</div>
+			</section>
+
+			<br>
+
+			<fieldset required>
+				<legend>Inserisci i dati della tua carta di credito</legend>
+
+				<br>
+
+				<label for="nunber">Numero della carta:
+					<input type="text" id="number" name="nunber-card" minlength="13" maxlength="19">
+				</label>
+
+				<br>
+
+				<label for="cvc">CVC:
+					<input type="text" id="cvc" name="cvc" minlength="3" maxlength="4" size="4">
+				</label>
+
+				<br>
+
+				<label for="mmyy">Scadenza:
+					<input type="month" id="mmyy" name="card-expiration">
+				</label>
+			</fieldset>
+
+			<br>
+
+			<section>
+				<div>
+					<label for="address">Indirizzo di fatturazione:
+						<input type="text" id="address" name="invoice-address" placeholder="Indirizzo + numero civico">
+					</label>
+
+					<br>
+
+					<label for="cap">CAP:
+						<input type="text" id="cap" name="cap" minlength="5" maxlength="5" size="5">
+					</label>
+				</div>
+			</section>
+
+			<br>
+			
+			<section>
+				<div>
+					<button type="submit">INVIA</button>
+				</div>
 			</section>
 		</form>
 	</body>
