@@ -79,6 +79,8 @@
 			</section>
 
 			<br>
+			
+			<!--  Questo è un'altro modo per fare il piano di abbonamento.
 
 			<fieldset>
 				<legend>Seleziona piano di abbonamento</legend>
@@ -110,11 +112,30 @@
 					</li>
 				</ul>
 			</fieldset>
+			-->
 			
-			<br>
-
 			<section>
 				<div>
+					<label for="plan">Seleziona piano di abbonamento:
+						<strong><abbr title="richiesto">*</abbr></strong>
+						<select name="plan" id="plan" required>
+							<option value="0">FREE (Gratuito)</option>
+							<optgroup label="MENSILI">
+								<option value="97">BASE 97€</option>
+								<option value="197">STANDARD 197€</option>
+								<option value="397">PREMIUM 397€</option>
+							</optgroup>
+						</select>
+					</label>
+				</div>
+
+				<br>
+
+				<div>
+					<label for="benefits-pro">
+					<input type="checkbox" id="benefits-pro" name="benefits">
+					Spunta per avere i vantaggi PRO
+					</label>
 				</div>
 			</section>
 
